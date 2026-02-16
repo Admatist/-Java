@@ -1,0 +1,14 @@
+package Lab4;
+import java.util.Scanner;
+
+public class Task8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Введите температуру: ");
+        int t = sc.nextInt();
+
+        if (t < 10) System.out.println("Холодно");
+        else if (t <= 25) System.out.println("Тепло");
+        else System.out.println("Жарко");
+    }
+}
