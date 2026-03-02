@@ -2,13 +2,12 @@ package Lab7;
 
 public class Task1 {
     public static void main(String[] args) {
-        int[] a = {-5, 10, -2, 4, -8, 1, 0, -3, 15, -7, 2, -1, 6, -4, 9, -10, 3, -6, 8, -12};
+        int[] a = new int[20];
         int sum = 0;
-        for (int x : a) {
-            if (x < 0) {
-                sum += x;
-            }
+        for (int i = 0; i < a.length; i++) {
+            a[i] = (int) (Math.random() * 200) - 100;
+            if (a[i] < 0) sum += a[i];
         }
-        System.out.println("Сумма отрицательных элементов: " + sum);
+        System.out.println("Сумма отрицательных в A[20]: " + sum);
     }
 }

@@ -2,14 +2,16 @@ package Lab7;
 
 public class Task4 {
     public static void main(String[] args) {
-        int[][] matrix = new int[3][5];
-        System.out.println("Таблица 3x5:");
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 5; j++) {
-                matrix[i][j] = (int) (Math.random() * 10);
-                System.out.print(matrix[i][j] + "\t");
+        int[] c = new int[25];
+        long prod = 1;
+        boolean found = false;
+        for (int i = 0; i < c.length; i++) {
+            c[i] = (int) (Math.random() * 10);
+            if (c[i] > 0) {
+                prod *= c[i];
+                found = true;
             }
-            System.out.println();
         }
+        System.out.println("Произведение положительных в C[25]: " + (found ? prod : 0));
     }
 }

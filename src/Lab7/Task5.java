@@ -2,12 +2,12 @@ package Lab7;
 
 public class Task5 {
     public static void main(String[] args) {
-        String s1 = "Hello", s2 = "World", s3 = "Java", s4 = "test", s5 = "test";
-
-        if (s4.equals(s5)) {
-            System.out.println("Результат объединения: " + s1 + s2);
-        } else {
-            System.out.println("Строки s4 и s5 не равны");
+        double[] d = new double[17];
+        double sum = 0;
+        for (int i = 0; i < d.length; i++) {
+            d[i] = Math.random() * 100;
+            sum += d[i];
         }
+        System.out.println("Среднее арифметическое D[17]: " + (sum / d.length));
     }
 }
